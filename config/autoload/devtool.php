@@ -10,6 +10,13 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 return [
+    /**
+     * Supported IDEs: "sublime", "textmate", "cursor", "emacs", "macvim", "phpstorm", "idea",
+     *        "vscode", "vscode-insiders", "vscode-remote", "vscode-insiders-remote",
+     *        "atom", "nova", "netbeans", "xdebug"
+     */
+    'ide' => env('DEVTOOL_IDE', ''),
+
     'generator' => [
         'amqp' => [
             'consumer' => [
@@ -37,8 +44,8 @@ return [
         'middleware' => [
             'namespace' => 'App\Middleware',
         ],
-        'Process' => [
-            'namespace' => 'App\Processes',
+        'process' => [
+            'namespace' => 'App\Process',
         ],
     ],
 ];
